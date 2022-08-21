@@ -20,7 +20,7 @@ const Login = () => {
     { setSubmitting }: FormikHelpers<Partial<TLoginValues>>
   ) => {
     try {
-      const { data } = await API.post("auth/login", values);
+      const { data } = await API.post("/auth/login", values);
       saveRefreshToken(data?.refreshToken);
       navigate(getRedirectUrlFromState(state as TState), { replace: true });
     } catch (error) {
