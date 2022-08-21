@@ -37,7 +37,7 @@ const Communities = () => {
             {posts?.map((post) => (
               <CommunityPostCard
                 {...post}
-                key={post._id}
+                key={post?._id}
                 toggleSave={toggleSave}
                 toggleVote={toggleVote}
               />
